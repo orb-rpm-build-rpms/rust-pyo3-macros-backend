@@ -5,8 +5,8 @@
 %global crate pyo3-macros-backend
 
 Name:           rust-%{crate}
-Version:        0.13.1
-Release:        2%{?dist}
+Version:        0.13.2
+Release:        1%{?dist}
 Summary:        Code generation for PyO3 package
 
 # Upstream license specification: Apache-2.0
@@ -70,6 +70,9 @@ which use "default" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Fri Feb 12 2021 Fabio Valentini <decathorpe@gmail.com> - 0.13.2-1
+- Update to version 0.13.2.
+
 * Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.13.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
