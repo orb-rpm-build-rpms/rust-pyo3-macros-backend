@@ -5,7 +5,7 @@
 %global crate pyo3-macros-backend
 
 Name:           rust-pyo3-macros-backend
-Version:        0.21.2
+Version:        0.22.0
 Release:        %autorelease
 Summary:        Code generation for PyO3 package
 
@@ -56,6 +56,18 @@ This package contains library source intended for building other packages which
 use the "experimental-async" feature of the "%{crate}" crate.
 
 %files       -n %{name}+experimental-async-devel
+%ghost %{crate_instdir}/Cargo.toml
+
+%package     -n %{name}+gil-refs-devel
+Summary:        %{summary}
+BuildArch:      noarch
+
+%description -n %{name}+gil-refs-devel %{_description}
+
+This package contains library source intended for building other packages which
+use the "gil-refs" feature of the "%{crate}" crate.
+
+%files       -n %{name}+gil-refs-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %prep
