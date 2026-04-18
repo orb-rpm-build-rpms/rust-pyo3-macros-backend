@@ -1,0 +1,6 @@
+[requires]
+build = ["dos2unix"]
+
+[scripts]
+prep.post = ["dos2unix --keepdate src/derive_attributes.rs"]
+
